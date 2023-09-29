@@ -25,3 +25,11 @@ WHERE weight > 10.5;
 SELECT *
 FROM animals
 WHERE neutered = TRUE;
+
+SELECT *
+FROM animals
+WHERE name != 'Gabumon';
+
+SELECT *
+FROM animals
+WHERE weight >= 10.4 AND weight <= 17.3;
