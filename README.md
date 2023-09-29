@@ -64,7 +64,7 @@ You have to have tools like:
 Clone this repository to your desired folder:
 
 ```sh
-git git@github.com:ulises2607/Vet-clinic-database.git
+git git@github.com:ulises2607/Vet-Clinic-DB.git
 ```
 Go to the project directory.
 
