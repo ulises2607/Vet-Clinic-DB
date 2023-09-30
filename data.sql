@@ -36,3 +36,69 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight) VAL
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight) VALUES
 ('Ditto', '2022-05-14', 4, true, 22);
+
+-- Insert data into all the tables
+
+INSERT INTO owners (full_name, age)
+VALUES
+    ('Sam Smith', 34),
+    ('Jennifer Orwell', 19),
+    ('Bob', 45),
+    ('Melody Pond', 77),
+    ('Dean Winchester', 14),
+    ('Jodie Whittaker', 38);
+
+select * from owners;
+
+INSERT INTO species (name)
+VALUES
+	('Pokemon'),
+	('Digimon')
+	
+SELECT * FROM species;
+
+select * FROM animals
+order by id;
+
+SELECT * FROM animals
+where name like '%mon'
+
+BEGIN;
+
+UPDATE animals
+SET species_id = 2
+WHERE name like '%mon'
+
+UPDATE animals
+SET species_id = 1
+WHERE species_id is null;
+
+COMMIT;
+
+BEGIN;
+
+UPDATE animals
+SET owner_id = 1
+WHERE name = 'Agumon';
+
+
+UPDATE animals
+SET owner_id = 2
+WHERE name IN ('Gabumon', 'Pikachu');
+
+
+UPDATE animals
+SET owner_id = 3
+WHERE name IN ('Devimon', 'Plantmon');
+
+
+UPDATE animals
+SET owner_id = 4
+WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
+
+
+UPDATE animals
+SET owner_id = 5
+WHERE name IN ('Angemon', 'Boarmon');
+
+COMMIT;
